@@ -43,7 +43,7 @@ export default function OAuth() {
     <Button
       outline
       type='button'
-      className='flex w-full justify-between'
+      className='flex w-full items-center justify-center gap-2'
       onClick={handleOAuth}
     >
       <FcGoogle className='text-xl mr-2 w-5 h-5' />
