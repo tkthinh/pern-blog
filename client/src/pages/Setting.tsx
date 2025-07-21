@@ -167,7 +167,7 @@ export default function () {
 
   return (
     <div className='flex min-h-full flex-col justify-center gap-y-10 max-w-lg mx-auto'>
-      <div className='p-6 lg:px-8 bg-slate-100 dark:bg-neutral-600 shadow-sm rounded'>
+      <div className='p-6 lg:px-8 bg-slate-100 dark:bg-neutral-600 shadow-xs rounded-sm'>
         {actionMessage && (
           <Alert color={actionMessage.success ? 'success' : 'failure'}>
             {actionMessage.message}
@@ -197,7 +197,7 @@ export default function () {
               <img
                 src={imageFileUrl || currentUser?.photoUrl}
                 alt={`${currentUser?.username}'s Avatar`}
-                className='w-full h-full rounded-full border-[4px] border-gray-400 object-cover'
+                className='w-full h-full rounded-full border-4 border-gray-400 object-cover'
               />
             </div>
             <div>
@@ -211,7 +211,7 @@ export default function () {
                   type='text'
                   disabled
                   value={currentUser?.username}
-                  className='cursor-not-allowed block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset text-black ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-cyan-500 sm:text-sm sm:leading-6'
+                  className='cursor-not-allowed block w-full rounded-md border-0 py-1.5 shadow-xs ring-1 ring-inset text-black ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-cyan-500 sm:text-sm sm:leading-6'
                 />
               </div>
             </div>
@@ -226,7 +226,7 @@ export default function () {
                   type='email'
                   disabled
                   value={currentUser?.email}
-                  className='cursor-not-allowed block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset text-black ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-cyan-500 sm:text-sm sm:leading-6'
+                  className='cursor-not-allowed block w-full rounded-md border-0 py-1.5 shadow-xs ring-1 ring-inset text-black ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-cyan-500 sm:text-sm sm:leading-6'
                 />
               </div>
             </div>
@@ -235,7 +235,7 @@ export default function () {
         </div>
       </div>
 
-      <div className='p-6 lg:px-8 bg-slate-100 dark:bg-neutral-600 shadow-sm rounded'>
+      <div className='p-6 lg:px-8 bg-slate-100 dark:bg-neutral-600 shadow-xs rounded-sm'>
         <div className='sm:mx-auto sm:w-full sm:max-w-sm'>
           <h2 className='text-center text-2xl font-bold leading-9 tracking-tight'>
             Change Your Password
@@ -255,7 +255,7 @@ export default function () {
                   type='password'
                   minLength={6}
                   required
-                  className='block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset text-black ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-cyan-500 sm:text-sm sm:leading-6'
+                  className='block w-full rounded-md border-0 py-1.5 shadow-xs ring-1 ring-inset text-black ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-cyan-500 sm:text-sm sm:leading-6'
                   onChange={handleFormInput}
                 />
               </div>
@@ -271,7 +271,7 @@ export default function () {
                   type='password'
                   minLength={6}
                   required
-                  className='block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset text-black ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-cyan-500 sm:text-sm sm:leading-6'
+                  className='block w-full rounded-md border-0 py-1.5 shadow-xs ring-1 ring-inset text-black ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-cyan-500 sm:text-sm sm:leading-6'
                   onChange={handleFormInput}
                 />
               </div>
@@ -287,7 +287,7 @@ export default function () {
                   type='password'
                   minLength={6}
                   required
-                  className='block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset text-black ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-cyan-500 sm:text-sm sm:leading-6'
+                  className='block w-full rounded-md border-0 py-1.5 shadow-xs ring-1 ring-inset text-black ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-cyan-500 sm:text-sm sm:leading-6'
                   onChange={handleFormInput}
                 />
               </div>

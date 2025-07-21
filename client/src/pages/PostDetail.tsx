@@ -7,7 +7,7 @@ import { actionStart, actionSuccess, actionFailed } from '../redux/actionSlice';
 
 import { useParams } from 'react-router-dom';
 
-import { Alert, Drawer, Spinner } from 'flowbite-react';
+import { Alert, Drawer, DrawerHeader, DrawerItems, Spinner } from 'flowbite-react';
 import { HiInformationCircle } from 'react-icons/hi';
 import { FcLike } from 'react-icons/fc';
 import { BsChat } from 'react-icons/bs';
@@ -121,7 +121,7 @@ export default function PostDetail() {
               <img
                 src={postData.poster}
                 alt='Poster'
-                className='w-full h-full mx-auto aspect-[21/9] object-cover rounded'
+                className='w-full h-full mx-auto aspect-21/9 object-cover rounded-sm'
               />
             </div>
             <h1>{postData.title}</h1>
@@ -164,7 +164,7 @@ export default function PostDetail() {
             {parse(postData.content!)}
           </div>
           <div className='fixed bottom-10 w-full flex flex-row justify-center'>
-            <div className='flex items-center justify-between border border-gray-400 gap-x-4 bg-neutral-200 dark:bg-white shadow-sm rounded-full px-6 py-4'>
+            <div className='flex items-center justify-between border border-gray-400 gap-x-4 bg-neutral-200 dark:bg-white shadow-xs rounded-full px-6 py-4'>
               <button className='border-r-2 pr-4 border-gray-500'>
                 <FcLike className='text-2xl' />
               </button>
@@ -174,13 +174,13 @@ export default function PostDetail() {
             </div>
           </div>
           <Drawer open={isOpen} onClose={handleClose} position='right'>
-            <Drawer.Header title='Comments' titleIcon={HiEnvelope} />
-            <Drawer.Items>
+            <DrawerHeader title='Comments' titleIcon={HiEnvelope} />
+            <DrawerItems>
               {currentUser && (
                 <form className='mb-4' onSubmit={handleCommentSubmit}>
                   <div>
                     <textarea
-                      className='block w-full rounded-md border-0 py-1.5 mb-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-500 sm:text-sm sm:leading-6 resize-none'
+                      className='block w-full rounded-md border-0 py-1.5 mb-2 text-black shadow-xs ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-500 sm:text-sm sm:leading-6 resize-none'
                       id='comment'
                       name='comment'
                       placeholder='Add your comment...'
@@ -204,7 +204,7 @@ export default function PostDetail() {
                   <p>Be the first one to comment!</p>
                 )}
               </div>
-            </Drawer.Items>
+            </DrawerItems>
           </Drawer>
         </>
       )}

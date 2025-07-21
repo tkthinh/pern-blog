@@ -1,4 +1,13 @@
-import { Avatar, Dropdown, Navbar, TextInput } from 'flowbite-react';
+import {
+  Avatar,
+  Dropdown,
+  DropdownDivider,
+  DropdownHeader,
+  DropdownItem,
+  Navbar,
+  NavbarBrand,
+  TextInput,
+} from 'flowbite-react';
 import { FiEdit } from 'react-icons/fi';
 import { CiSearch, CiLight } from 'react-icons/ci';
 
@@ -34,17 +43,17 @@ export default function Header() {
 
   return (
     <header
-      className='h-18 w-full mb-4 border-b-[1px] shadow-sm border-gray-300 bg-white'
+      className='h-18 w-full mb-4 border-b shadow-xs border-gray-300 bg-white'
     >
       <Navbar fluid rounded className='dark:text-gray-200 dark:bg-neutral-800'>
-        <Navbar.Brand href='/' className=''>
+        <NavbarBrand href='/' className=''>
           <div className='flex items-center justify-between gap-1 text-xl font-bold uppercase tracking-wide'>
             <span className='text-gray-600 dark:text-gray-200'>Blog</span>
             <span className='rounded-lg px-1 py-0.5 bg-gray-600 text-white dark:bg-gray-200 dark:text-gray-600'>
               Field
             </span>
           </div>
-        </Navbar.Brand>
+        </NavbarBrand>
         <TextInput
           className='hidden md:block '
           id='search'
@@ -73,18 +82,18 @@ export default function Header() {
                   inline
                   label={<Avatar alt='User settings' img={currentUser.photoUrl} rounded />}
                 >
-                  <Dropdown.Header>
+                  <DropdownHeader>
                     <span className='block text-sm font-bold'>@{currentUser.username}</span>
                     <span className='block truncate text-sm font-medium'>
                       {currentUser.email}
                     </span>
-                  </Dropdown.Header>
-                  <Dropdown.Item href={`/user/${currentUser.id}`}>Profile</Dropdown.Item>
-                  <Dropdown.Item href={'/new-post'}>Create Post</Dropdown.Item>
-                  <Dropdown.Item href={'/reading-list'}>My Reading List</Dropdown.Item>
-                  <Dropdown.Item href={'/setting'}>Settings</Dropdown.Item>
-                  <Dropdown.Divider />
-                  <Dropdown.Item onClick={handleSignout}>Sign out</Dropdown.Item>
+                  </DropdownHeader>
+                  <DropdownItem href={`/user/${currentUser.id}`}>Profile</DropdownItem>
+                  <DropdownItem href={'/new-post'}>Create Post</DropdownItem>
+                  <DropdownItem href={'/reading-list'}>My Reading List</DropdownItem>
+                  <DropdownItem href={'/setting'}>Settings</DropdownItem>
+                  <DropdownDivider />
+                  <DropdownItem onClick={handleSignout}>Sign out</DropdownItem>
                 </Dropdown>
               </>
             ) : (

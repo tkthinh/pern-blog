@@ -66,10 +66,10 @@ export default function User() {
         ) : null}
       </div>
       <div className='flex h-full w-full items-center justify-center'>
-        <div className='my-10 mx-auto px-4 md:px-8 flex h-full w-full flex-col items-center justify-center lg:max-w-screen-md xl:max-w-screen-lg'>
+        <div className='my-10 mx-auto px-4 md:px-8 flex h-full w-full flex-col items-center justify-center lg:max-w-(--breakpoint-md) xl:max-w-(--breakpoint-lg)'>
           {userInfo && (
             <div className='flex w-full flex-col rounded-3xl bg-white dark:bg-neutral-600 shadow-md'>
-              <div className='relative h-44 w-full rounded-t-3xl bg-gradient-to-r from-rose-100 to-teal-100 dark:from-blue-200 dark:to-purple-400'>
+              <div className='relative h-44 w-full rounded-t-3xl bg-linear-to-r from-rose-100 to-teal-100 dark:from-blue-200 dark:to-purple-400'>
                 <div className='absolute -bottom-10 left-12'>
                   <div className='group relative h-28 w-28 rounded-full border-2 border-white bg-gray-100'>
                     <img

@@ -81,7 +81,7 @@ const Post: React.FC<PostProp> = ({ postInfo, user, onBookmarkChange }) => {
         className='group flex flex-col md:grid md:grid-cols-12 md:h-44 h-80 w-full gap-4 overflow-hidden'
       >
         <div className='block md:col-span-8 md:flex md:h-full w-full flex-col space-y-4'>
-          <p className='text-2xl font-bold font-slab text-gray-800 dark:text-gray-50 decoration-blue-500 group-hover:underline'>
+          <p className='text-2xl font-bold  text-gray-800 dark:text-gray-50 decoration-blue-500 group-hover:underline'>
             {postInfo.title}
           </p>
           <p className='line-clamp-3 md:line-clamp-5 text-sm text-gray-500 dark:text-gray-300'>

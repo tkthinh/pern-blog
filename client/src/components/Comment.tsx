@@ -11,8 +11,8 @@ interface Comment {
 const Comment: React.FC<{comment: Comment}> = ({comment}) =>  {
   
   return (
-    <div className='flex w-full flex-col rounded p-2 border border-gray-300'>
-      <div className=' flex items-center gap-4 pt-0 pb-6 mx-0 mt-4 none rounded '>
+    <div className='flex w-full flex-col rounded-sm p-2 border border-gray-300'>
+      <div className=' flex items-center gap-4 pt-0 pb-6 mx-0 mt-4 none rounded-sm '>
         <img
           src={comment.user.photoUrl}
           alt={comment.user.username}

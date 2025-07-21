@@ -150,7 +150,7 @@ export default function Home() {
       {actionMessage && <Alert color={'failure'}>{actionMessage?.message}</Alert>}
       <div className='grid grid-cols-1 lg:grid-cols-2 p-8 gap-4'>
         {/* Blog Editor */}
-        <div className='w-full max-w-3xl p-5 my-6 border border-gray-200 rounded-lg shadow mx-auto'>
+        <div className='w-full max-w-3xl p-5 my-6 border border-gray-200 rounded-lg shadow-sm mx-auto'>
           <h2 className='text-3xl font-bold border-b border-gray-400 pb-2 mb-5 '>
             Blog Editor
           </h2>
@@ -169,7 +169,7 @@ export default function Home() {
                     name='title'
                     id='title'
                     required={true}
-                    className='block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-500 sm:text-sm sm:leading-6'
+                    className='block w-full rounded-md border-0 py-1.5 text-black shadow-xs ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-500 sm:text-sm sm:leading-6'
                     placeholder='Type the blog title'
                   />
                 </div>
@@ -183,7 +183,7 @@ export default function Home() {
                   Upload Poster
                 </label>
                 <input
-                  className='block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-neutral-700 dark:border-neutral-600 dark:placeholder-gray-400'
+                  className='block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-hidden dark:bg-neutral-700 dark:border-neutral-600 dark:placeholder-gray-400'
                   id='poster'
                   type='file'
                   accept='image/*'
@@ -208,7 +208,7 @@ export default function Home() {
                     id='slug'
                     disabled={true}
                     required={true}
-                    className='block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-500 sm:text-sm sm:leading-6'
+                    className='block w-full rounded-md border-0 py-1.5 text-black shadow-xs ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-500 sm:text-sm sm:leading-6'
                     placeholder='Auto generated'
                   />
                 </div>
@@ -219,7 +219,7 @@ export default function Home() {
                   {tagList.map((tag, index) => (
                     <div
                       key={index}
-                      className='flex px-2 py-1 mr-2 rounded bg-slate-300 dark:bg-gray-200 dark:text-black'
+                      className='flex px-2 py-1 mr-2 rounded-sm bg-slate-300 dark:bg-gray-200 dark:text-black'
                     >
                       <p>{tag} </p>
                       <button
@@ -257,7 +257,7 @@ export default function Home() {
                   onChange={(e) => setDescription(e.target.value)}
                   value={description}
                   required={true}
-                  className='block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-500 sm:text-sm sm:leading-6'
+                  className='block w-full rounded-md border-0 py-1.5 text-black shadow-xs ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-500 sm:text-sm sm:leading-6'
                   placeholder='Write a short description'
                 ></textarea>
               </div>
@@ -290,7 +290,7 @@ export default function Home() {
         </div>
 
         {/* Blog View */}
-        <div className=' blog-view w-full max-w-3xl p-8 my-6 border border-gray-200 rounded-lg shadow mx-auto'>
+        <div className=' blog-view w-full max-w-3xl p-8 my-6 border border-gray-200 rounded-lg shadow-sm mx-auto'>
           <h2 className='text-3xl font-bold border-b border-gray-400 pb-2 mb-5 '>Blog View</h2>
           <div className='grid gap-4 sm:grid-cols-2 sm:gap-6'>
             {/* Poster */}
@@ -299,7 +299,7 @@ export default function Home() {
                 <img
                   src={posterUrl}
                   alt='Poster'
-                  className='w-full h-full mx-auto aspect-[21/9] object-cover rounded'
+                  className='w-full h-full mx-auto aspect-21/9 object-cover rounded-sm'
                 />
               )}
             </div>
